@@ -1,0 +1,3 @@
+[submodule "HoloEngine/vendor/spdlog"]
+	path = HoloEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
