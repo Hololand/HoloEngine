@@ -4,10 +4,13 @@
 #include "HoloEngine/Events/ApplicationEvent.h"
 #include "HoloEngine/Log.h"
 
+#include <GLFW/glfw3.h>
+
 namespace HoloEngine {
 
 	HoloEngine::Application::Application()
 	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	HoloEngine::Application::~Application()
@@ -15,16 +18,12 @@ namespace HoloEngine {
 	}
 	void Application::Run()
 	{
-		WindowResizeEvent e(1280, 720);
-		if (e.IsInCategory(EventCategoryApplication))
+		while (m_Running)
 		{
-			HE_TRACE(e);
+			glClearColor(1, 0, 1, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->OnUpdate();
 		}
-		if (e.IsInCategory(EventCategoryInput))
-		{
-			HE_TRACE(e);
-		}
-		while (true);
 	}
 }
 

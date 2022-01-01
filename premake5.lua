@@ -11,6 +11,12 @@ workspace "HoloEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directions relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "HoloEngine/vendor/GLFW/include"
+
+include "HoloEngine/vendor/GLFW"
+
 project "HoloEngine"
 	location "HoloEngine"
 	kind "SharedLib"
@@ -31,7 +37,14 @@ project "HoloEngine"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

@@ -7,6 +7,12 @@
     <Filter Include="HoloEngine\Events">
       <UniqueIdentifier>{F100436F-5D17-4105-A68E-CC2612E4118D}</UniqueIdentifier>
     </Filter>
+    <Filter Include="platform">
+      <UniqueIdentifier>{4A63C33C-3630-1E48-5F49-0CF04B7553D6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform\Windows">
+      <UniqueIdentifier>{84B77CA1-70B0-9BF3-99E2-8078853A7BFF}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\HoloEngine.h" />
@@ -34,7 +40,13 @@
     <ClInclude Include="src\HoloEngine\Log.h">
       <Filter>HoloEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\HoloEngine\Window.h">
+      <Filter>HoloEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\hepch.h" />
+    <ClInclude Include="src\platform\Windows\WindowsWindow.h">
+      <Filter>platform\Windows</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\HoloEngine\Application.cpp">
@@ -44,5 +56,8 @@
       <Filter>HoloEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\hepch.cpp" />
+    <ClCompile Include="src\platform\Windows\WindowsWindow.cpp">
+      <Filter>platform\Windows</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
