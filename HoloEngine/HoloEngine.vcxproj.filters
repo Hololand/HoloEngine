@@ -4,6 +4,9 @@
     <Filter Include="HoloEngine">
       <UniqueIdentifier>{AD99D68F-9951-18DD-0259-F138EE2FB3CD}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HoloEngine\Events">
+      <UniqueIdentifier>{F100436F-5D17-4105-A68E-CC2612E4118D}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\HoloEngine.h" />
@@ -16,9 +19,22 @@
     <ClInclude Include="src\HoloEngine\EntryPoint.h">
       <Filter>HoloEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\HoloEngine\Events\ApplicationEvent.h">
+      <Filter>HoloEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HoloEngine\Events\Event.h">
+      <Filter>HoloEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HoloEngine\Events\KeyEvent.h">
+      <Filter>HoloEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HoloEngine\Events\MouseEvent.h">
+      <Filter>HoloEngine\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\HoloEngine\Log.h">
       <Filter>HoloEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\hepch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\HoloEngine\Application.cpp">
@@ -27,5 +43,6 @@
     <ClCompile Include="src\HoloEngine\Log.cpp">
       <Filter>HoloEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\hepch.cpp" />
   </ItemGroup>
 </Project>
