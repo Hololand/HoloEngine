@@ -14,8 +14,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directions relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "HoloEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "HoloEngine/vendor/Glad/include"
+IncludeDir["ImGui"] = "HoloEngine/vendor/imgui"
 
 include "HoloEngine/vendor/GLFW"
+include "HoloEngine/vendor/Glad"
+include "HoloEngine/vendor/imgui"
 
 project "HoloEngine"
 	location "HoloEngine"
@@ -38,12 +42,16 @@ project "HoloEngine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}",
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
@@ -55,7 +63,8 @@ project "HoloEngine"
 		defines
 		{
 			"HE_PLATFORM_WINDOWS",
-			"HE_BUILD_DLL"
+			"HE_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
@@ -65,14 +74,17 @@ project "HoloEngine"
 
 	filter "configurations:Debug"
 		defines "HE_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "HE_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "HE_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"
@@ -112,12 +124,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "HE_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "HE_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "HE_DIST"
+		buildoptions "/MD"
 		optimize "On"

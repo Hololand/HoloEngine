@@ -7,8 +7,14 @@
     <Filter Include="HoloEngine\Events">
       <UniqueIdentifier>{F100436F-5D17-4105-A68E-CC2612E4118D}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HoloEngine\ImGui">
+      <UniqueIdentifier>{97DCC89E-83D5-E7F0-AC07-CD75985FC7FC}</UniqueIdentifier>
+    </Filter>
     <Filter Include="platform">
       <UniqueIdentifier>{4A63C33C-3630-1E48-5F49-0CF04B7553D6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform\OpenGL">
+      <UniqueIdentifier>{3E351A86-AAC0-874A-B3D1-0A3F1FDCE34A}</UniqueIdentifier>
     </Filter>
     <Filter Include="platform\Windows">
       <UniqueIdentifier>{84B77CA1-70B0-9BF3-99E2-8078853A7BFF}</UniqueIdentifier>
@@ -37,6 +43,15 @@
     <ClInclude Include="src\HoloEngine\Events\MouseEvent.h">
       <Filter>HoloEngine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\HoloEngine\ImGui\ImGuiLayer.h">
+      <Filter>HoloEngine\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HoloEngine\Layer.h">
+      <Filter>HoloEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HoloEngine\LayerStack.h">
+      <Filter>HoloEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\HoloEngine\Log.h">
       <Filter>HoloEngine</Filter>
     </ClInclude>
@@ -44,6 +59,9 @@
       <Filter>HoloEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\hepch.h" />
+    <ClInclude Include="src\platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\platform\Windows\WindowsWindow.h">
       <Filter>platform\Windows</Filter>
     </ClInclude>
@@ -52,10 +70,22 @@
     <ClCompile Include="src\HoloEngine\Application.cpp">
       <Filter>HoloEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\HoloEngine\ImGui\ImGuiLayer.cpp">
+      <Filter>HoloEngine\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HoloEngine\Layer.cpp">
+      <Filter>HoloEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HoloEngine\LayerStack.cpp">
+      <Filter>HoloEngine</Filter>
+    </ClCompile>
     <ClCompile Include="src\HoloEngine\Log.cpp">
       <Filter>HoloEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\hepch.cpp" />
+    <ClCompile Include="src\platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\platform\Windows\WindowsWindow.cpp">
       <Filter>platform\Windows</Filter>
     </ClCompile>

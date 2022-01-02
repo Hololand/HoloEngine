@@ -1,7 +1,10 @@
 #pragma once
 
 #include "HoloEngine/Window.h"
+
 #include <GLFW/glfw3.h>
+
+struct GLFWwindow;
 
 namespace HoloEngine {
 	class WindowsWindow : public Window
